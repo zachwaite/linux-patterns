@@ -117,3 +117,11 @@ foo=(1 2 3 4 5)
 echo ${foo[@]}
 # outputs 1 2 3 4 5
 ```
+
+## Grab a module from one git branch into another
+
+See (https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0)[https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0]
+
+```sh
+git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep
+```
