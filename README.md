@@ -125,3 +125,33 @@ See (https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0)[htt
 ```sh
 git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep
 ```
+
+## Git push with personal access token
+
+1) Create a github personal access token and copy it somewhere.
+
+2) Create a git remote using the https protocol
+
+```sh
+git remote add https https://github.com/somerepo.git
+```
+
+3) Push
+
+```sh
+git push https <branch>
+```
+
+You will be prompted for an access token, serving as your password
+
+## Git push as specific author
+
+```sh
+git push <remote> <branch> --author "Zach Waite <zach@waiteperspectives.com>"
+```
+
+## Git push when not on a branch
+
+```sh
+git push <remote> HEAD:<branch>
+```
