@@ -155,3 +155,72 @@ git push <remote> <branch> --author "Zach Waite <zach@waiteperspectives.com>"
 ```sh
 git push <remote> HEAD:<branch>
 ```
+
+# age protocol
+
+age protocol is for file encryption. The reference implementation is in go, but there is
+a compatible rust implementation. The go implementation is more ubiquitous, but as long
+as the rust implementation remains compatible, I would prefer that because I could more
+easily build it from source offline if needed. Offline first is an important consideration
+for security.
+
+## Installation
+
+```sh
+cargo install rage
+```
+
+## Create a keypair
+
+A keypair is a single file in age. The public key is commented out in the keyfile and
+also printed to the screen when generating for easily copying. This makes it easy to
+generate keys. Ease of keygen is actually favorable for security.
+
+```sh
+rage-keygen > kepair.txt
+```
+
+## Create a passphrase encrypted keypair
+
+```sh
+rage -p -o passphrase_keypair.txt <(rage-keygen)
+```
+
+## Encrypt a file
+
+```sh
+rage -o secrets.json.age -r <AGE PUBLIC KEY> secrets.json
+```
+
+## Decrypt a file
+
+```sh
+rage --decrypt -i keypair.txt secrets.json.age
+```
+
+
+# File encryption using SOPS and age
+
+## Create a keypair
+
+**Note: passphrase protected keypairs do not seem to be supported for sops**
+
+```sh
+rage-keygen > keypair.txt
+```
+
+## Encrypt a file
+
+**Note: preserve the file extension or sops won't what editor to open with**
+
+```sh
+sops --encrypt --age <AGE PUBLIC KEY> secrets.json > secrets.enc.json
+```
+
+## Edit an encrypted file
+
+```sh
+export SOPS_AGE_KEY_FILE=/full/path/to/keypair.txt
+sops keypair.txt
+```
+
