@@ -144,6 +144,12 @@ git push https <branch>
 
 You will be prompted for an access token, serving as your password
 
+## Git commit as specific author
+
+```sh
+git -c user.name="Zach Waite" -c user.email="zach@waiteperspectives.com" commit -m "Test commit"
+```
+
 ## Git push as specific author
 
 ```sh
