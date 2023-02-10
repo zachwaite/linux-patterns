@@ -15,19 +15,23 @@ echo 'set editing-mode vi' >> ~/.inputrc
 
 ## Edit a command in vim
 
-Sometimes when you type a long command you make a mistake or simply want to rerun a command which is very similar to a previous command. There are 2 ways:
+Sometimes when you type a long command you make a mistake or simply want to
+rerun a command which is very similar to a previous command. There are 2 ways:
 
 1. **Use vi mode in bash**
 
-This is the simplest. Simply use `ESC` to enter normal mode emulation and most keybindings are available.
+This is the simplest. Simply use `ESC` to enter normal mode emulation and most
+keybindings are available.
 
 2. Edit the command in vim
 
-This is when you want the full power of vim. Hit `ESC` to enter normal mode, then `v` to open the command in the vim editor in a temporary file.
+This is when you want the full power of vim. Hit `ESC` to enter normal mode,
+then `v` to open the command in the vim editor in a temporary file.
 
 ## Testing conditions
 
-Use 2 opening brackets, space, value 1, comparison option, value 2, space 2 closing brackets.
+Use 2 opening brackets, space, value 1, comparison option, value 2, space 2
+closing brackets.
 
 Example:
 
@@ -83,7 +87,8 @@ bash -n myscript.sh
 
 ## Shellcheck
 
-Use `coc-sh` or some other bash-language-server client that leverages shellcheck.
+Use `coc-sh` or some other bash-language-server client that leverages
+shellcheck.
 
 ## Using arrays
 
@@ -120,7 +125,8 @@ echo ${foo[@]}
 
 ## Grab a module from one git branch into another
 
-See (https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0)[https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0]
+See
+(https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0)[https://github.com/OCA/maintainer-tools/wiki/Migration-to-version-15.0]
 
 ```sh
 git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | git am -3 --keep
@@ -128,15 +134,15 @@ git format-patch --keep-subject --stdout origin/15.0..origin/14.0 -- $MODULE | g
 
 ## Git push with personal access token
 
-1) Create a github personal access token and copy it somewhere.
+1. Create a github personal access token and copy it somewhere.
 
-2) Create a git remote using the https protocol
+2. Create a git remote using the https protocol
 
 ```sh
 git remote add https https://github.com/somerepo.git
 ```
 
-3) Push
+3. Push
 
 ```sh
 git push https <branch>
@@ -161,72 +167,3 @@ git push <remote> <branch> --author "Zach Waite <zach@waiteperspectives.com>"
 ```sh
 git push <remote> HEAD:<branch>
 ```
-
-# age protocol
-
-age protocol is for file encryption. The reference implementation is in go, but there is
-a compatible rust implementation. The go implementation is more ubiquitous, but as long
-as the rust implementation remains compatible, I would prefer that because I could more
-easily build it from source offline if needed. Offline first is an important consideration
-for security.
-
-## Installation
-
-```sh
-cargo install rage
-```
-
-## Create a keypair
-
-A keypair is a single file in age. The public key is commented out in the keyfile and
-also printed to the screen when generating for easily copying. This makes it easy to
-generate keys. Ease of keygen is actually favorable for security.
-
-```sh
-rage-keygen > kepair.txt
-```
-
-## Create a passphrase encrypted keypair
-
-```sh
-rage -p -o passphrase_keypair.txt <(rage-keygen)
-```
-
-## Encrypt a file
-
-```sh
-rage -o secrets.json.age -r <AGE PUBLIC KEY> secrets.json
-```
-
-## Decrypt a file
-
-```sh
-rage --decrypt -i keypair.txt secrets.json.age
-```
-
-
-# File encryption using SOPS and age
-
-## Create a keypair
-
-**Note: passphrase protected keypairs do not seem to be supported for sops**
-
-```sh
-rage-keygen > keypair.txt
-```
-
-## Encrypt a file
-
-**Note: preserve the file extension or sops won't what editor to open with**
-
-```sh
-sops --encrypt --age <AGE PUBLIC KEY> secrets.json > secrets.enc.json
-```
-
-## Edit an encrypted file
-
-```sh
-export SOPS_AGE_KEY_FILE=/full/path/to/keypair.txt
-sops keypair.txt
-```
-
