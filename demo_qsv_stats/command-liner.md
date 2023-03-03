@@ -1,4 +1,4 @@
-# qsv stats | qsv table | less -S -
+# qsv stats | qsv table | less -S - 2023-03-03
 
 ## tldr;
 
