@@ -1,0 +1,11 @@
+key,field,type,sum,min,max,range,min_length,max_length,mean,stddev,variance,nullcount,sparsity
+Premium,carat,Float,12300.95,0.2,4.01,3.81,3,4,0.892,0.5152,0.2655,0,0
+Premium,cut,String,,Premium,Premium,,7,7,,,,0,0
+Premium,color,String,,D,J,,1,1,,,,0,0
+Premium,clarity,String,,I1,VVS2,,2,4,,,,0,0
+Premium,depth,Float,844901.1,58.0,63.0,5,4,4,61.2647,1.1588,1.3428,0,0
+Premium,table,Float,810167.4,51.0,62.0,11,4,4,58.7461,1.4785,2.186,0,0
+Premium,price,Integer,63221498,326,18823,18497,3,5,4584.2577,4349.0473,18914212.2081,0,0
+Premium,x,Float,82385.88,0.0,10.14,10.14,3,5,5.9739,1.1882,1.4118,0,0
+Premium,y,Float,81985.82,0.0,58.9,58.9,3,4,5.9449,1.2597,1.5869,0,0
+Premium,z,Float,50297.49,0.0,8.06,8.06,3,4,3.6471,0.7311,0.5346,0,0

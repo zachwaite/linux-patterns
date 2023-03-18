@@ -1,0 +1,33 @@
+#! /usr/bin/env bash
+
+set -o errexit
+set -o nounset
+
+FILENAME="$1";
+OUTDIR="$2";
+KEY=$(basename -s .csv "$FILENAME");
+TMP_KEYFILE="$OUTDIR/TMP_${KEY}field.csv"
+TMP_STATSFILE="$OUTDIR/TMP_${KEY}stats.csv"
+STATSFILE="$OUTDIR/${KEY}_stats.csv"
+OUTFILE="$OUTDIR/${KEY}_mean.csv"
+
+# prepare fixed field
+cat > "$TMP_KEYFILE" << EOF
+key
+"$KEY"
+EOF
+
+# compute stats
+qsv stats "$FILENAME" > "$TMP_STATSFILE"
+
+# add new field, storing all the stats
+qsv join --cross 1 "$TMP_KEYFILE" 1 "$TMP_STATSFILE" > "$STATSFILE"
+
+# drop the tmp file
+rm "$TMP_KEYFILE" "$TMP_STATSFILE"
+
+# Filter to result
+qsv search 'price' --select 'field' "$STATSFILE" \
+  | qsv select 'key,mean' \
+  > "$OUTFILE"
+

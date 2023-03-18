@@ -1,0 +1,11 @@
+key,field,type,sum,min,max,range,min_length,max_length,mean,stddev,variance,nullcount,sparsity
+Fair,carat,Float,1684.28,0.22,5.01,4.79,3,4,1.0461,0.5162,0.2665,0,0
+Fair,cut,String,,Fair,Fair,,4,4,,,,0,0
+Fair,color,String,,D,J,,1,1,,,,0,0
+Fair,clarity,String,,I1,VVS2,,2,4,,,,0,0
+Fair,depth,Float,103107.1,43.0,79.0,36,4,4,64.0417,3.6423,13.2663,0,0
+Fair,table,Float,95076.6,49.0,95.0,46,4,4,59.0538,3.945,15.5633,0,0
+Fair,price,Integer,7017600,337,18574,18237,3,5,4358.7578,3559.2807,12668479.3177,0,0
+Fair,x,Float,10057.5,0.0,10.74,10.74,3,5,6.2469,0.964,0.9293,0,0
+Fair,y,Float,9954.07,0.0,10.54,10.54,3,5,6.1827,0.9561,0.9141,0,0
+Fair,z,Float,6412.26,0.0,6.98,6.98,3,4,3.9828,0.6514,0.4244,0,0

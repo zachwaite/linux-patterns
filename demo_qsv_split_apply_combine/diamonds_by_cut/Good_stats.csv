@@ -1,0 +1,11 @@
+key,field,type,sum,min,max,range,min_length,max_length,mean,stddev,variance,nullcount,sparsity
+Good,carat,Float,4166.1,0.23,3.01,2.78,3,4,0.8492,0.454,0.2061,0,0
+Good,cut,String,,Good,Good,,4,4,,,,0,0
+Good,color,String,,D,J,,1,1,,,,0,0
+Good,clarity,String,,I1,VVS2,,2,4,,,,0,0
+Good,depth,Float,305967,54.3,67.0,12.7,4,4,62.3659,2.1692,4.7052,0,0
+Good,table,Float,287955.9,51.0,66.0,15,4,4,58.6946,2.851,8.1283,0,0
+Good,price,Integer,19275009,327,18788,18461,3,5,3928.8645,3681.2144,13551339.1041,0,0
+Good,x,Float,28645.08,0.0,9.44,9.44,3,4,5.8388,1.0572,1.1177,0,0
+Good,y,Float,28703.75,0.0,9.38,9.38,3,4,5.8507,1.0514,1.1055,0,0
+Good,z,Float,17855.42,0.0,5.79,5.79,3,4,3.6395,0.6548,0.4288,0,0
