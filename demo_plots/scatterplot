@@ -1,0 +1,9 @@
+#! /usr/bin/env python3
+
+import sys
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(sys.stdin)
+df.plot.scatter(x=df.columns[0], y=df.columns[1])
+plt.show()
