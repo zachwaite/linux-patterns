@@ -1,0 +1,6 @@
+{
+  "labels": ["Product L", "Product Z", "Product D", "Product A", "Product B", "Product M"],
+  "initial_result": 5050,
+  "low_results":[4950, 4950, 4950, 4800, 4595, 4050],
+  "high_results": [5150, 5200, 5350, 5200, 5350, 7550]
+}
