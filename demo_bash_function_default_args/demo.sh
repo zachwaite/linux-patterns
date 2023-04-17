@@ -13,3 +13,5 @@ greet() {
 
 echo "Using default arg: --> $(greet)"
 echo "Supplied arg: --> $(greet Zach)"
+
+# link: [https://stackoverflow.com/questions/9332802/how-to-write-a-bash-script-that-takes-optional-input-arguments)(https://stackoverflow.com/questions/9332802/how-to-write-a-bash-script-that-takes-optional-input-arguments)
