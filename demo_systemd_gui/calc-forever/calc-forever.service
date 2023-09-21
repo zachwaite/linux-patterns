@@ -1,0 +1,11 @@
+[Unit]
+Description=galculator Forever
+PartOf=graphical-session.target
+
+[Service]
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/galculator
+
+[Install]
+WantedBy=xsession.target
