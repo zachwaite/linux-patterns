@@ -1,0 +1,13 @@
+Package: hello-world
+Version: 0.0.1
+Architecture: amd64
+Maintainer: zach@waiteperspectives.com
+Depends: libc6
+Filename: pool/main/hello-world-0.0.1-1_amd64.deb
+Size: 2848
+MD5sum: f641005b9eba439351afbf324c817b20
+SHA1: 136864084c5af1e6128bd0dbd6d21829d99298fb
+SHA256: bc5e8b46f4cfe0c9dfc9c323aece58a23b900303675ba933b036f23cd5582ba4
+Homepage: http://example.com
+Description: A program that prints hello"
+

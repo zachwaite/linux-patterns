@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Example Repository
+Label: Example
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64 arm64 arm7
+Components: main
+Description: An example software repository
+Date: Thu, 06 Jul 2023 10:33:04 +0000
+MD5Sum:
+ e2f5441cdbf6d51d07a51079efbe7f73 315 main/binary-amd64/Packages.gz
+ 4a7dab6ac66467ebbb6b47f77b284523 404 main/binary-amd64/Packages
+ eaa8b78f79a1833a55891794718b9b94 314 main/binary-arm64/Packages.gz
+ 631e0e40b575e0c906870400e1c2104c 404 main/binary-arm64/Packages
+SHA1:
+ 1f8ccf68f16176afc638aaa1f5d7900d49a82bc5 315 main/binary-amd64/Packages.gz
+ 0f67da962e557add6d1c9d6d5fe5a216374524cb 404 main/binary-amd64/Packages
+ 834df8f8cd3a651105fa2b85f312b1e0e379c984 314 main/binary-arm64/Packages.gz
+ 36b8373e82557d81811f9eaad7cd4b86e8e4884d 404 main/binary-arm64/Packages
+SHA256:
+ d32f2b5eadbd8400396241c86cd745389b30feb28d340a0a9cc59009407fdab4 315 main/binary-amd64/Packages.gz
+ d564eaf74a52eddf67458a6cca145dd74ed39bbf822bd08e1bd5601065dd9694 404 main/binary-amd64/Packages
+ cb79d77d77d984efd30342e407b75eda3ae0eb1424035e87d472e054cf96ccb2 314 main/binary-arm64/Packages.gz
+ 7bd8b229a8052c4ba7e1b92cf6729e37cc748513392fe8fc67b8dd22bbdaf0ce 404 main/binary-arm64/Packages
+-----BEGIN PGP SIGNATURE-----
+
+iQJIBAEBCgAyFiEE4Ow3+RRg4MC2UM/+mR5wQM89IXEFAmSmnd4UHGV4YW1wbGVA
+ZXhhbXBsZS5jb20ACgkQmR5wQM89IXHqWRAAkGwx0Op+2GHGkpmCPAhTmybqeaIH
+wilia158hZ8xew9vhiFsceuS8fcav7yJKanwpMkP6s4/RFUSqYuM+04vIrcQI6qf
+x1yB8HlJdOJdMmkmjChFNblm0IrDnlRB3bsz8ZCv0BDIp+n5ogByzcBalG3BWtxt
+1zwJs/yXbDLjGnZymDV408B98LeikvvQ2f7OmhuvVm1l4ZfTVLfWvDYyrz5ynlpy
+fWhExaA/GBHYqwZSidJhVT4WRmvlk8Q8jhVz0vj3W7u2SjzJ4cJpXPfDtVCbstzp
+cH+dPzURDWjCRPSrj6UOrpP3Zin8fV1fF3FaiqIIfqNIJ8DKuH/yE0SwLUZEx80K
+9ibiooq8iER+QfX5+/IjMKrFlKqV2my9COXMPbdVP4lv5kS7fvzFGsEKV1mmFyoK
+gYfOoJrhISHHVNdUwQ3yleJZPdeOgB2/IAI4ZFsya+MJoEf3RqM2nqJsFdCbJw68
+RyRsoX5VsVBDxfB7h6aS8atZQ00A7ES9Tq+FbE0IRsvjMzVgkm1YcyUC+7jTdKUY
+UB2/53AtbgplRf4nMTRBebSImLEeZIX/2pgej12xc2ctQFsVZC7oiHFQRz5tcGIo
+/X+/QD8wJwkclMQO183f3QCohoIqsX8ttYxpY0/j97RYE5Vj1PH/Y0zoybjNr1Oc
+NMKXsy4pFsINcEk=
+=vdtc
+-----END PGP SIGNATURE-----
