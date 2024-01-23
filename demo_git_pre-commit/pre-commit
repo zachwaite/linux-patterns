@@ -1,0 +1,14 @@
+#!/bin/bash
+
+git diff --cached --name-status --diff-filter=ACM | while read -r _ file; do
+    if [[ "$file" =~ .py$ ]] && grep -i "^[^#]*pdb" "$file"; then
+        echo "$file: has debugger statement"
+        exit 1
+    fi
+done
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "main" ]; then
+  echo "You can't commit directly to main branch on this project"
+  exit 1
+fi
