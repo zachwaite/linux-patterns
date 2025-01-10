@@ -1,0 +1,3 @@
+dist/resilient-app /opt/
+resilient-app.1 /usr/share/man/man1/
+resilient-app.service /etc/systemd/system/

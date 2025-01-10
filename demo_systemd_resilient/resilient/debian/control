@@ -1,0 +1,13 @@
+Source: resilient-app
+Section: misc
+Maintainer: Zach Waite <zach@waiteperspectives.com>
+Build-Depends: debhelper (>=7),
+               python3 (>=3.5)
+Standards-Version: 4.5.1
+Priority: optional
+
+Package: resilient-app
+Architecture: all
+Depends:
+  ${misc:Depends}
+Description: Demo app for systemd resilience testing

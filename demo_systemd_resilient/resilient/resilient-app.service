@@ -1,0 +1,19 @@
+[Unit]
+Description=resilient-app
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+SyslogIdentifier=resilient-app
+User=resilient
+Group=resilient
+ExecStart=/opt/resilient-app/resilient-app -c /tmp/resilient.json
+StandardOutput=journal+console
+Restart=always
+RestartSec=1s
+RestartMaxDelaySec=60s
+RestartSteps=10
+
+[Install]
+WantedBy=multi-user.target
