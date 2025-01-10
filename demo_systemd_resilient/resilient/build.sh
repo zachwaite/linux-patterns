@@ -18,6 +18,8 @@ rm -rf "$PWD/buildenv"
 rm -rf "$PWD/build"
 rm -rf "$PWD/dist"
 rm -f resilient-app.1
+rm -rf "$PWD/pkg/"
+mkdir -p "$PWD/pkg/"
 
 echo "Prepare virtualenv using Python 3.10"
 python3.10 -m virtualenv buildenv
@@ -38,6 +40,6 @@ echo "Build man pages"
 pandoc resilient-app.1.md -s -t man > resilient-app.1
 
 echo "Build deb package"
-debuild --no-tgz-check -uc -us
+debuild --no-tgz-check -uc -us -b
 debuild -T clean
-
+mv ../resilient-app*.build ./pkg/

@@ -146,3 +146,4 @@ coc-config.json
 **pyrightconfig.json
 **nocommit
 nocommit*
+resilient/pkg/*.build
